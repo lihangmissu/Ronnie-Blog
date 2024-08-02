@@ -1,6 +1,6 @@
 <template>
   <div class="setting-index-root">
-    <el-tabs tab-position="left" class="setting-tabs" v-model="activeTab">
+    <el-tabs v-model="activeTab" tab-position="left" class="setting-tabs">
       <el-tab-pane label="登录" name="login">
         <div class="setting-container">
           <div class="wrapper">
@@ -35,8 +35,8 @@ const userStore = useUserStore()
 const route = useRoute()
 
 onMounted(() => {
-  document.title = 'Blossom 设置'
-  let actTab = route.query.activeTab as string
+  document.title = '设置'
+  const actTab = route.query.activeTab as string
   if (isNotBlank(actTab)) {
     activeTab.value = actTab
   } else {

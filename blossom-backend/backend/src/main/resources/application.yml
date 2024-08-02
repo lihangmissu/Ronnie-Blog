@@ -17,8 +17,8 @@ spring:
     active: prod
   servlet:
     multipart:
-      max-file-size: 50MB
-      max-request-size: 50MB
+      max-file-size: 500MB
+      max-request-size: 1024MB
   mvc:
     pathmatch:
       matching-strategy: ant_path_matcher
